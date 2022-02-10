@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eng</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="start">
+            <button type="button" class="btn" data-lang="ru">Rus - Eng</button>
+            <button type="button" class="btn" data-lang="en">Eng - Rus</button>
+        </div>
+        <div class="step-list" data-lang="ru">
+            <dis class="step active">
+                <button type="button" class="btn" data-translate="333">111</button>
+            </dis>
+            <dis class="step">
+                <button type="button" class="btn" data-back>Back</button>
+            </dis>
+        </div>
+        <div class="step-list" data-lang="en">
+            <dis class="step active">
+                <button type="button" class="btn" data-step>111</button>
+            </dis>
+            <dis class="step">
+                <button type="button" class="btn" data-back>Back</button>
+            </dis>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
