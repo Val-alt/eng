@@ -27,6 +27,7 @@ body {
     align-items: center;
     min-height: 100%;
     height: 100%;
+    padding: 20px;
 }
 
 .start {
@@ -35,13 +36,16 @@ body {
 
 /* btn */
 .btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 250px;
+    max-width: 350px;
+    height: 110px;
     border-radius: 10px;
     font-size: 20px;
     font-family: "Muli", sans-serif;
-    padding: 40px 10px;
+    padding: 10px;
     margin: 40px auto;
     border: none;
     outline: none;
@@ -54,6 +58,9 @@ body {
 .btn.translate {
     background-color: #b5e1ff;
 }
+.btn--sm {
+    height: 60px;
+}
 
 /* step */
 .step-list {
@@ -62,7 +69,17 @@ body {
 }
 .step {
     display: none;
+    position: relative;
 }
 .step.active {
     display: block;
+}
+.number {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: #b5ffc4;
+    font-weight: bold;
+    top: -80px;
 }

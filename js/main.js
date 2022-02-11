@@ -14,8 +14,8 @@ $(function () {
         ["handsome", "красивый (м)"],
         ["overweight/fat", "лишний вес"],
         ["thin", "худой"],
-        // 1
-        ["arrive", "прибыть"],
+        // 2
+        ["arrive", "прибыть", "new"],
         ["suddenly", "внезапно"],
         ["amazing", "удивительный"],
         ["pleased", "довольный"],
@@ -47,48 +47,83 @@ $(function () {
             return array;
         }
 
-        var wordsRus = shuffle(words);
-        var wordsEng = shuffle(words);
-
-        var contentRus = "",
-            contentEng = "";
-
-        var startBtn = '<div class="step"><button type="button" class="btn" data-translate="';
-        var middleBtn = '">';
-        var finishBtn = "</button></div>";
-        var finishContent =
+        var btn1 = '<div class="step"><p class="number">';
+        var btn2 = '</p><button type="button" class="btn" data-translate="';
+        var btn3 = '">';
+        var btn4 = "</button></div>";
+        var btn5 =
             '<div class="step"><button type="button" class="btn" data-back>Back</button></div>';
 
-        $(wordsRus).each(function (index) {
-            contentRus +=
-                startBtn +
-                words[index][0] +
-                middleBtn +
-                (index + 1) +
-                ". " +
-                words[index][1] +
-                finishBtn;
+        (function rusContent() {
+            var wordsRus = shuffle(words);
+            var contentRus = "";
+
+            $(wordsRus).each(function (index) {
+                contentRus +=
+                    btn1 + (index + 1) + btn2 + words[index][0] + btn3 + words[index][1] + btn4;
+            });
+
+            contentRus += btn5;
+            $(".step-list[data-lang='ru']").html(contentRus);
+        })();
+
+        (function engContent() {
+            var wordsEng = shuffle(words);
+            var contentEng = "";
+
+            $(wordsEng).each(function (index) {
+                contentEng +=
+                    btn1 + (index + 1) + btn2 + words[index][1] + btn3 + words[index][0] + btn4;
+            });
+
+            contentEng += btn5;
+            $(".step-list[data-lang='en']").html(contentEng);
+        })();
+
+        var isNew = false,
+            wordsNew = [];
+
+        $(words).each(function (index) {
+            if (words[index][2] === "new") {
+                isNew = true;
+            }
+            if (isNew) {
+                wordsNew.push(words[index]);
+            }
         });
+        isNew = false;
 
-        $(wordsEng).each(function (index) {
-            contentEng +=
-                startBtn +
-                words[index][1] +
-                middleBtn +
-                (index + 1) +
-                ". " +
-                words[index][0] +
-                finishBtn;
-        });
+        (function rusNewContent() {
+            var wordsNewRus = shuffle(wordsNew);
+            var contentNewRus = "";
 
-        contentRus += finishContent;
-        contentEng += finishContent;
+            $(wordsNewRus).each(function (index) {
+                contentNewRus +=
+                    btn1 + (index + 1) + btn2 + words[index][0] + btn3 + words[index][1] + btn4;
+            });
 
-        $(".step-list[data-lang='ru']").html(contentRus);
-        $(".step-list[data-lang='en']").html(contentEng);
+            contentNewRus += btn5;
+            $(".step-list[data-lang='new-ru']").html(contentNewRus);
+        })();
 
-        $(".wrapper").find($(".step-list[data-lang='ru']")).find(".step").eq(0).addClass("active");
-        $(".wrapper").find($(".step-list[data-lang='en']")).find(".step").eq(0).addClass("active");
+        (function engNewContent() {
+            var wordsNewEng = shuffle(wordsNew);
+            var contentNewEng = "";
+
+            $(wordsNewEng).each(function (index) {
+                contentNewEng +=
+                    btn1 + (index + 1) + btn2 + words[index][1] + btn3 + words[index][0] + btn4;
+            });
+
+            contentNewEng += btn5;
+            $(".step-list[data-lang='new-en']").html(contentNewEng);
+        })();
+
+        $(".wrapper")
+            .find($(".step-list"))
+            .each(function () {
+                $(this).find(".step").eq(0).addClass("active");
+            });
     })();
 
     var lang;
