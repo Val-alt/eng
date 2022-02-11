@@ -68,11 +68,17 @@ body {
     width: 100%;
 }
 .step {
-    display: none;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease-in;
 }
 .step.active {
-    display: block;
+    opacity: 1;
+    z-index: 10;
 }
 .number {
     position: absolute;
@@ -81,5 +87,5 @@ body {
     font-size: 40px;
     color: #b5ffc4;
     font-weight: bold;
-    top: -80px;
+    top: -50px;
 }

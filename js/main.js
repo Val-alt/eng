@@ -42,6 +42,19 @@ $(function () {
     ];
 
     (function contentSteps() {
+        var isNew = false,
+            wordsNew = [];
+
+        $(words).each(function (index) {
+            if (words[index][2] === "new") {
+                isNew = true;
+            }
+            if (isNew) {
+                wordsNew.push(words[index]);
+            }
+        });
+        isNew = false;
+
         function shuffle(array) {
             array.sort(() => Math.random() - 0.5);
             return array;
@@ -80,26 +93,19 @@ $(function () {
             $(".step-list[data-lang='en']").html(contentEng);
         })();
 
-        var isNew = false,
-            wordsNew = [];
-
-        $(words).each(function (index) {
-            if (words[index][2] === "new") {
-                isNew = true;
-            }
-            if (isNew) {
-                wordsNew.push(words[index]);
-            }
-        });
-        isNew = false;
-
         (function rusNewContent() {
             var wordsNewRus = shuffle(wordsNew);
             var contentNewRus = "";
 
             $(wordsNewRus).each(function (index) {
                 contentNewRus +=
-                    btn1 + (index + 1) + btn2 + words[index][0] + btn3 + words[index][1] + btn4;
+                    btn1 +
+                    (index + 1) +
+                    btn2 +
+                    wordsNewRus[index][0] +
+                    btn3 +
+                    wordsNewRus[index][1] +
+                    btn4;
             });
 
             contentNewRus += btn5;
@@ -112,7 +118,13 @@ $(function () {
 
             $(wordsNewEng).each(function (index) {
                 contentNewEng +=
-                    btn1 + (index + 1) + btn2 + words[index][1] + btn3 + words[index][0] + btn4;
+                    btn1 +
+                    (index + 1) +
+                    btn2 +
+                    wordsNewEng[index][1] +
+                    btn3 +
+                    wordsNewEng[index][0] +
+                    btn4;
             });
 
             contentNewEng += btn5;
@@ -130,9 +142,8 @@ $(function () {
     $(".btn[data-lang]").on("click", function () {
         lang = $(this).data("lang");
 
-        $(".start").slideUp(function () {
-            $(".step-list[data-lang='" + lang + "']").slideDown();
-        });
+        $(".start").hide();
+        $(".step-list[data-lang='" + lang + "']").show();
     });
 
     var checkTranslate = true;
@@ -150,19 +161,17 @@ $(function () {
                 $(this).html($(this).data("translate"));
                 $(this).addClass("translate");
             } else {
-                $(this).closest(".step").hide();
-                $(this).closest(".step").next().show();
-                checkTranslate = true;
+                $(this).closest(".step").removeClass("active");
+
+                setTimeout(() => {
+                    $(this).closest(".step").next().addClass("active");
+                    checkTranslate = true;
+                }, 150);
             }
         }, 300);
     });
 
     $("[data-back").on("click", function () {
-        $(this).closest(".step").hide();
-        $(".step-list").hide();
-        $(".start").slideDown();
-        if ($(".step.active:hidden")) {
-            $(".step.active:hidden").show();
-        }
+        location.reload();
     });
 });
