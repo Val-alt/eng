@@ -16,14 +16,15 @@ $(function () {
         ["thin", "худой"],
         // 2
         ["arrive", "прибыть", "new"],
-        ["suddenly", "внезапно"],
         ["amazing", "удивительный"],
+        ["suddenly", "внезапно", "new"],
         ["pleased", "довольный"],
         ["carrot and stick", "морковь и палка (кнут и пряник)"],
-        // ["", ""],
-        // ["", ""],
-        // ["", ""],
-        // ["", ""],
+        // 3
+        ["steal", "воровать"],
+        ["thief", "врп"],
+        ["abroad", "за рубеж"],
+        ["cheat", "изменять"],
         // ["", ""],
         // ["", ""],
         // ["", ""],
@@ -174,4 +175,29 @@ $(function () {
     $("[data-back").on("click", function () {
         location.reload();
     });
+
+    (function articleOpen() {
+        var articleBtn1 = "<button type='button' class='btn btn--sm' data-article='",
+            articleBtn2 = "'>",
+            articleBtn3 = "</button>",
+            articleBtns = "";
+
+        $(".article").each(function (index) {
+            var btnTitle = $(".article[data-article='" + (index + 1) + "']")
+                .find(".article-title")
+                .html();
+            articleBtns += articleBtn1 + (index + 1) + articleBtn2 + btnTitle + articleBtn3;
+        });
+
+        $(".start").html(articleBtns);
+
+        $(".btn[data-article").on("click", function () {
+            var articleId = $(this).data("article");
+            $(".wrapper[data-main]").hide();
+            $(".wrapper[data-article]").show();
+
+            $(".article.active").removeClass("active");
+            $(".article[data-article='" + articleId + "']").addClass("active");
+        });
+    })();
 });
