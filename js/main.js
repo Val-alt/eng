@@ -177,27 +177,29 @@ $(function () {
     });
 
     (function articleOpen() {
-        var articleBtn1 = "<button type='button' class='btn btn--sm' data-article='",
-            articleBtn2 = "'>",
-            articleBtn3 = "</button>",
-            articleBtns = "";
+        if ($(".article").length) {
+            var articleBtn1 = "<button type='button' class='btn btn--sm' data-article='",
+                articleBtn2 = "'>",
+                articleBtn3 = "</button>",
+                articleBtns = "";
 
-        $(".article").each(function (index) {
-            var btnTitle = $(".article[data-article='" + (index + 1) + "']")
-                .find(".article-title")
-                .html();
-            articleBtns += articleBtn1 + (index + 1) + articleBtn2 + btnTitle + articleBtn3;
-        });
+            $(".article").each(function (index) {
+                var btnTitle = $(".article[data-article='" + (index + 1) + "']")
+                    .find(".article-title")
+                    .html();
+                articleBtns += articleBtn1 + (index + 1) + articleBtn2 + btnTitle + articleBtn3;
+            });
 
-        $(".start").html(articleBtns);
+            $(".start").html(articleBtns);
 
-        $(".btn[data-article").on("click", function () {
-            var articleId = $(this).data("article");
-            $(".wrapper[data-main]").hide();
-            $(".wrapper[data-article]").show();
+            $(".btn[data-article").on("click", function () {
+                var articleId = $(this).data("article");
+                $(".wrapper[data-main]").hide();
+                $(".wrapper[data-article]").show();
 
-            $(".article.active").removeClass("active");
-            $(".article[data-article='" + articleId + "']").addClass("active");
-        });
+                $(".article.active").removeClass("active");
+                $(".article[data-article='" + articleId + "']").addClass("active");
+            });
+        }
     })();
 });
