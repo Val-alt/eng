@@ -1,106 +1,73 @@
 $(function () {
     var words = [
         // 1
-        ["tall", "высокий"],
-        ["good-looking", "хорошо выглядеть"],
-        ["hopeful", "многообещающий"],
-        ["clever", "умный"],
-        ["independent", "независимый"],
-        ["spark", "искра/вспышка"],
-        ["treat", "заботиться/относиться"],
-        ["look after", "присматривать"],
-        ["generous", "щедрый"],
-        ["probably", "возможно"],
-        ["thin", "худой"],
+        ["good-looking", "хорошо выглядеть", "Her new boyfriend is very good-looking"],
+        ["clever", "умный", "My mother is very clever"],
+        ["independent", "независимый", "We need an independent test"],
+        ["treat", "заботиться/относиться", "I treat my kids"],
+        ["look after", "присматривать", "I'll look after her"],
+        ["generous", "щедрый", "You're generous"],
+        ["probably", "возможно", "she was probably right"],
         // 2
-        ["arrive", "прибыть"],
-        ["amazing", "удивительный"],
-        ["suddenly", "внезапно"],
-        ["pleased", "довольный"],
+        ["suddenly", "внезапно", "He suddenly collapsed"],
+        ["pleased", "довольный", "I'm pleased you still remember"],
         // 3
-        ["steal", "воровать"],
-        ["thief", "вор"],
-        ["abroad", "за рубеж"],
-        ["cheat", "изменять"],
-        ["queue", "очередь"],
-        ["expand", "расширять"],
+        ["queue", "очередь", "standing in the queue"],
+        ["expand", "расширять", "we could expand the house"],
         // 3 home
-        ["speech", "речь"],
-        ["avoid", "избегать"],
-        ["censorship", "цензура"],
+        ["speech", "речь", "historic speech"],
+        ["avoid", "избегать", "We avoid talk"],
+        ["censorship", "цензура", "censorship are rare"],
         // 4
-        ["quite", "немного"],
-        ["quiet", "тихий"],
-        ["lark", "жаворонок"],
-        ["and that's all", "это всё"],
-        ["lie-in", "валяться"],
-        ["nap", "вздремнуть"],
-        ["turn on", "включить"],
-        ["getting up", "вставать"],
-        ["exercise", "упражнения"],
-        ["just lying", "просто лежим"],
-        ["grass", "трава"],
-        ["keen", "увлеченный"],
-        ["going out", "выходить (из дома)"],
-        ["mostly", "в основном"],
-        ["stay in", "оставаться внутри"],
-        ["similar", "похоже"],
-        ["during", "в течение"],
-        ["spends", "тратит"],
-        ["absolutely love", "😊😊😊 абсолютно люблю"],
-        ["really like", "😊😊 действительно нравится"],
-        ["quite like", "😊 довольно нравится"],
-        ["quite keen on", "😊 довольно увлечен"],
-        ["don't mind", "😐 не против"],
-        ["not very keen on", "😞 очень не увлечен"],
-        ["really hate", "😞😞 реально ненавижу"],
-        ["can't stand", "😞😞 не могу терпеть"],
-        ["the same", "тоже"],
-        ["french fries", "картошка фри"],
-        ["do you", "не так ли"],
-        ["sailing", "парусный спорт"],
-        ["sentences", "предложение"],
-        ["sit-ups", "приседания"],
-        ["adores", "обожать"],
-        ["each other", "друг с другом"],
-        ["raw", "сырое"],
-        ["watermelon", "арбуз"],
-        ["revise", "повторять (слова)"],
-        ["bark", "лаять"],
-        ["fight", "борьба"],
-        ["yard", "задний двор", "new"],
-        ["prepare", "готовить"],
-        ["peach", "персик"],
-        ["tram", "тармвай"],
-        ["race", "гонка"],
-        ["bless you", "будь здоров"],
-        ["exciting", "захватывающий"],
-        ["lazy", "ленивый"],
-        ["worry", "переживать"],
-        ["enjoyable", "приятное"],
-        ["annoyed", "раздраженный"],
-        ["instant", "юыстрорастворимый"],
-        ["lose his/her/my temper", "выходить из себя"],
-        ["canteen", "столовая"],
-        ["neighbours", "соседи"],
-        ["noise", "звук"],
-        ["elderly people", "пожилые люди"],
-        ["properly", "качественно"],
-        ["caviar", "икра"],
-        ["enough", "достаточно"],
-        ["weekdays", "будни"],
-        ["depend", "зависит от"],
-        ["that long", "так долго"],
-        ["bit less", "немного меньше"],
-        ["suffer", "страдать"],
-        ["insomnia", "бессоница"],
-        ["fall asleep", "заснуть"],
-        ["very occasionally", "очень редко"],
+        ["nap", "вздремнуть", "just needed a nap"],
+        ["exercise", "упражнения", "This exercise is good"],
+        ["grass", "трава", "grass grow"],
+        ["keen", "увлеченный", "I was very keen"],
+        ["mostly", "в основном", "But I mostly did for her"],
+        ["during", "в течение", "during these consultations"],
+        ["spends", "тратит", "He spends his time"],
+        ["don't mind", "😐 не против", ""],
+        ["can't stand", "😞😞 не могу терпеть", ""],
+        ["adores", "обожать", "My husband adores music"],
+        ["each other", "друг с другом", "you all knew each other"],
+        ["revise", "повторять (слова)", "revise my statement"],
+        ["bark", "лаять", "dog's bark"],
+        ["fight", "борьба", "your first fight"],
+        ["yard", "задний двор", "you clean my yard"],
+        ["prepare", "готовить", "We prepare company documents"],
+        ["bless you", "будь здоров", ""],
+        ["exciting", "захватывающий", "your life was this exciting"],
+        ["lazy", "ленивый", "I'm lazy"],
+        ["enjoyable", "приятное", "enjoyable vacation"],
+        ["annoyed", "раздраженный", "And I'm annoyed at myself"],
+        ["instant", "юыстрорастворимый", "instant coffee"],
+        ["lose his/her/my temper", "выходить из себя", ""],
+        ["canteen", "столовая", "a hospital canteen"],
+        ["neighbours", "соседи", "Your neighbours say"],
+        ["noise", "звук", "noise is unhealthy"],
+        ["elderly people", "пожилые люди", ""],
+        ["properly", "качественно", "used properly"],
+        ["caviar", "икра", "champagne and caviar"],
+        ["enough", "достаточно", "Nice enough"],
+        ["depend", "зависит от", "It will depend of the physics note"],
+        ["bit less", "немного меньше", "make fire a bit less"],
+        ["suffer", "страдать", "you made me suffer"],
+        ["insomnia", "бессоница", "I suffer from insomnia"],
+        ["fall asleep", "заснуть", " I can never fall asleep when you're away"],
         ["occasionally", "время от времени"],
-        ["alarm clock", "будильник"],
-        ["catch an", " поймать"],
-        // ["", ""],
-        // ["", ""],
+        ["alarm clock", "будильник", "I got a new alarm clock"],
+        // 5
+        ["teases", "дразнить", "a boy teases a girl"],
+        ["naughty", "непослушный", "I may have been naughty"],
+        ["fluffy", "мой пушистый кот", "my fluffy cat"],
+        ["environment", "окружающая среда", "Her interest was in the environment"],
+        ["mess", "беспорядок", "Look at this mess"],
+        ["to hold", "держать/проводить", "I never got to hold her"],
+        // ["", "", ""],
+        // ["", "", ""],
+        // ["", "", ""],
+        // ["", "", ""],
+        // ["", "", ""],
     ];
 
     (function contentSteps() {
@@ -125,8 +92,9 @@ $(function () {
         var btn1 = '<div class="step"><p class="number">';
         var btn2 = '</p><button type="button" class="btn" data-translate="';
         var btn3 = '">';
-        var btn4 = "</button></div>";
-        var btn5 =
+        var btn4 = "</button><p class='example'>";
+        var btn5 = "</p></div>";
+        var btn6 =
             '<div class="step"><button type="button" class="btn" data-back>Back</button></div>';
 
         (function rusContent() {
@@ -135,10 +103,19 @@ $(function () {
 
             $(wordsRus).each(function (index) {
                 contentRus +=
-                    btn1 + (index + 1) + btn2 + words[index][0] + btn3 + words[index][1] + btn4;
+                    btn1 +
+                    (index + 1) +
+                    "/" +
+                    wordsRus.length +
+                    btn2 +
+                    words[index][0] +
+                    btn3 +
+                    words[index][1] +
+                    btn4 +
+                    btn5;
             });
 
-            contentRus += btn5;
+            contentRus += btn6;
             $(".step-list[data-lang='ru']").html(contentRus);
         })();
 
@@ -148,7 +125,17 @@ $(function () {
 
             $(wordsEng).each(function (index) {
                 contentEng +=
-                    btn1 + (index + 1) + btn2 + words[index][1] + btn3 + words[index][0] + btn4;
+                    btn1 +
+                    (index + 1) +
+                    "/" +
+                    wordsEng.length +
+                    btn2 +
+                    words[index][1] +
+                    btn3 +
+                    words[index][0] +
+                    btn4 +
+                    words[index][2] +
+                    btn5;
             });
 
             contentEng += btn5;
@@ -163,6 +150,8 @@ $(function () {
                 contentNewRus +=
                     btn1 +
                     (index + 1) +
+                    "/" +
+                    wordsNewRus.length +
                     btn2 +
                     wordsNewRus[index][0] +
                     btn3 +
@@ -182,6 +171,8 @@ $(function () {
                 contentNewEng +=
                     btn1 +
                     (index + 1) +
+                    "/" +
+                    wordsNewEng.length +
                     btn2 +
                     wordsNewEng[index][1] +
                     btn3 +

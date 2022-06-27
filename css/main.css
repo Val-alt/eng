@@ -109,6 +109,9 @@ body {
     font-weight: bold;
     top: -50px;
 }
+.example {
+    text-align: center;
+}
 
 /* article */
 .article {
