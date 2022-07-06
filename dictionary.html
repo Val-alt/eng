@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eng</title>
+    <title>Words - Eng</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body class="all-words">
     <div class="wrapper">
+        <a href="index.html" class="btn-back">Back</a>
         <div class="start">
-            <a href="words.html" class="btn btn--sm">Words</a>
-            <a href="tenses.html" class="btn btn--sm">English Tenses</a>
-            <a href="regulations.html" class="btn btn--sm">Regulations</a>
-            <a href="dictionary.html" class="btn btn--sm">Dictionary</a>
+            <button type="button" class="btn btn--sm" data-lang="ru">Rus - Eng</button>
+            <button type="button" class="btn btn--sm" data-lang="en">Eng - Rus</button>
         </div>
+        <div class="step-list" data-lang="ru"></div>
+        <div class="step-list" data-lang="en"></div>
     </div>
 
     <script src="js/jquery.min.js"></script>
