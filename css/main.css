@@ -141,3 +141,20 @@ body {
     color: #ffb5da;
     text-decoration: underline;
 }
+
+/* table */
+.table {
+    margin-bottom: 20px;
+}
+.table td {
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 14px;
+}
+.table td:last-child {
+    color: #ffb5da;
+}
+.table-header td {
+    font-weight: bold;
+    text-align: center;
+}

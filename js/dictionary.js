@@ -86,7 +86,10 @@ var allWords = [
     ["UNborn", "НЕрожденный", "UNborn child"],
     ["cheer up", "развеселить", "cheer up you"],
     ["pounds", "фунты", ""],
-  
+    // 8
+    ["chorus", "припев", "Sing along with me, this is the chorus"],
+    ["flop", "провал", "the movie will be a flop"],
+    ["lurics", "текст песни", "Who knows the lyrics"],
 
     // ["", "", ""],
     // ["", "", ""],
@@ -94,4 +97,4 @@ var allWords = [
     // ["", "", ""],
 ];
 
-export {allWords};
+export { allWords };

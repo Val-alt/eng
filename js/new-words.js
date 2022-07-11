@@ -38,10 +38,14 @@ var newWords = [
     ["cheer up", "развеселить", "cheer up you"],
     ["pounds", "фунты", ""],
 
+    ["chorus", "припев", "Sing along with me, this is the chorus"],
+    ["flop", "провал", "the movie will be a flop"],
+    ["lurics", "текст песни", "Who knows the lyrics"],
+
     // ["", "", ""],
     // ["", "", ""],
     // ["", "", ""],
     // ["", "", ""],
 ];
 
-export {newWords};
+export { newWords };
