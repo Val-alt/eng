@@ -91,6 +91,14 @@ var allWords = [
     ["flop", "провал", "the movie will be a flop"],
     ["lurics", "текст песни", "Who knows the lyrics"],
 
+    ["knife", "нож", "sharp knife"],
+    ["towel", "полотенце", "beach towel"],
+    ["flour", "мука", "rice flour"],
+    ["drop", "падать", ""],
+    ["laziness", "лень", ""],
+    ["graduate", "выпускник", "school graduate"],
+    ["couple", "пара/несколько", "couple of years ago"],
+
     // ["", "", ""],
     // ["", "", ""],
     // ["", "", ""],
