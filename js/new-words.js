@@ -42,6 +42,21 @@ var newWords = [
     ["flop", "провал", "the movie will be a flop"],
     ["lurics", "текст песни", "Who knows the lyrics"],
 
+    ["knife", "нож", "sharp knife"],
+    ["towel", "полотенце", "beach towel"],
+    ["flour", "мука", "rice flour"],
+    ["drop", "падать", ""],
+    ["laziness", "лень", ""],
+    ["graduate", "выпускник", "school graduate"],
+    ["couple", "пара/несколько", "couple of years ago"],
+
+    ["I would like", "я хотела бы", ""],
+    ["attitude to", "отношение", "my attitude to life "],
+    ["treasure", "сокровище", "treasure map"],
+    ["thirsty", "жаждущий", "the tourists were hot and thirsty"],
+
+
+    
     // ["", "", ""],
     // ["", "", ""],
     // ["", "", ""],

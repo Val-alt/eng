@@ -99,6 +99,11 @@ var allWords = [
     ["graduate", "выпускник", "school graduate"],
     ["couple", "пара/несколько", "couple of years ago"],
 
+    ["I would like", "я хотела бы", ""],
+    ["attitude to", "отношение", "my attitude to life "],
+    ["treasure", "сокровище", "treasure map"],
+    ["thirsty", "жаждущий", "the tourists were hot and thirsty"],
+
     // ["", "", ""],
     // ["", "", ""],
     // ["", "", ""],
