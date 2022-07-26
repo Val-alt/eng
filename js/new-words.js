@@ -55,7 +55,27 @@ var newWords = [
     ["treasure", "сокровище", "treasure map"],
     ["thirsty", "жаждущий", "the tourists were hot and thirsty"],
 
+    ["charity", "благодтворительность", "money for charity"],
+    ["poverty", "бедность", "poverty line"],
+    ["earn", "зарабатывать", "they earn $35 per hour"],
+    ["barefoot", "босиком", "barefoot on the grass"],
+    ["poor", "бедный", "very poor diet"],
+    ["jeweller", "ювелир", ""],
+    ["perfomer", "выступающий", "a circus performer"],
 
+    ["however", "однако", ""],
+    ["furniture", "мебель", "wooden furniture"],
+    ["experience", "опыт", "good experience"],
+    ["terrible", "ужасный", "terrible conditions "],
+    ["huge", "огромный", "huge cake"],
+    ["determination", "решимость/определение", ""],
+    ["decided", "решенный", "decided cases"],
+    ["passing", "прохождение", "passing the game"],
+
+    ["both", "оба", ""],
+    ["stomachache", "боль в животе", ""],
+    ["cabbage", "капуста", "cabbage soup"],
+    ["recently", "недавно", "recently woke up"],
     
     // ["", "", ""],
     // ["", "", ""],
