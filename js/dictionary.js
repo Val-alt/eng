@@ -126,6 +126,17 @@ var allWords = [
     ["cabbage", "капуста", "cabbage soup"],
     ["recently", "недавно", "recently woke up"],
 
+    ["entertainment", "развлечение", "a theatrical entertainment"],
+    ["reduce", "снижать", "reduce the price"],
+    ["painkiller", "обезбол", ""],
+    ["appropriate", "соответствующий", "appropriate design"],
+    ["alert", "предупреждение", ""],
+    ["imaginative", "творческий", "imaginative artist"],
+    ["perhaps", "возможно", ""],
+    ["brain", "мозг", "brainstorming"],
+    ["improve", "улучшать", "improve health"],
+    ["higher", "выше", "higher education"],
+    ["rest", "остаток/отдыхать", "you need a rest"],
 
     // ["", "", ""],
     // ["", "", ""],

@@ -141,6 +141,14 @@ body {
     color: #ffb5da;
     text-decoration: underline;
 }
+.article ul {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.article li {
+    list-style-type: disc;
+    padding-bottom: 5px;
+}
 
 /* table */
 .table {
